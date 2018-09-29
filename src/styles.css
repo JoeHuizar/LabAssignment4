@@ -9,3 +9,7 @@
     height: 100vh;
     background-color: #01728a;
   }
+  .align-center {
+    margin: 15px;
+    border: 1px dashed #CCC;
+  }
