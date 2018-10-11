@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+interface IStudent {
+  id?: number;
+  firstName: string;
+  lastName: string;
+  course: string;
+}
 
 @Component({
   selector: 'main-content',
@@ -7,9 +13,47 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainContentComponent implements OnInit {
 
-  constructor() { }
+  students: Array<object> = [];
+
+  constructor() {
+    this.students[0] = {
+      id: 1,
+      firstName: "Joseph",
+      lastName: "Huizar",
+      course: "Programming"
+    }
+    this.students[1] = {
+      id: 1,
+      firstName: "Dwayne",
+      lastName: "Johnson",
+      course: "Acting"
+    }
+    this.students[2] = {
+      id: 1,
+      firstName: "Barack",
+      lastName: "Obama",
+      course: "Beatz"
+    }
+    this.students[3] = {
+      id: 1,
+      firstName: "Joe",
+      lastName: "Biden",
+      course: "Politics"
+    }
+  }
 
   ngOnInit() {
+  }
+
+  addStudent() {
+    const student: IStudent = {
+      id: 1,
+      firstName: "Jimmy",
+      lastName: "Fallon",
+      course: "TV"
+    };
+
+    this.students.push(student);
   }
 
 }
